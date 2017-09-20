@@ -7,4 +7,8 @@ public class ProductAddedEvent extends AbstractEvent {
         super(id);
         this.name = name;
     }
+
+    public String getName() {
+        return name;
+    }
 }

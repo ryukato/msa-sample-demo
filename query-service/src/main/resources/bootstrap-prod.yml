@@ -1,0 +1,27 @@
+spring:
+#  cloud:
+#    config:
+#      uri: http://localhost:8888
+#      fail-fast: true
+#      retry:
+#        initial-interval: 2000
+#        max-attempts: 30
+  rabbitmq:
+    host: localhost
+    port: 5762
+    username: test
+    password: password
+    virtual-host: /
+    queue: product.default.queue
+  data:
+      mongodb:
+        uri: mongodb://localhost:27017/products_query
+
+axon:
+  amqp:
+    exchange: product.events.fanout.exchange
+#    queue: product.default.queue
+    transaction-mode: none
+    durable-messages: true
+  eventhandling:
+    processors:

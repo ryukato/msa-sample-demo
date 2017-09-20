@@ -1,0 +1,17 @@
+
+logging:
+    level:
+        root: INFO
+        org.springframework: DEBUG
+            #aop: DEBUG
+            #dao: DEBUG
+            #orm: DEBUG
+            #amqp: DEBUG
+            #data: DEBUG
+            #transaction: DEBUG
+        org.axonframework: INFO
+        com.msa.cqrs: INFO
+spring:
+  data:
+    mongodb:
+      uri: mongo://localhost:27017/msa_test

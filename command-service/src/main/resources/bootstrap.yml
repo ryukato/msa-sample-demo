@@ -1,12 +1,8 @@
 spring:
   application:
     name: command-service
-  cloud:
-    config:
-      uri: http://localhost:8888
-      fail-fast: true
-      retry:
-        initial-interval: 2000
-        max-attempts: 30
+  profiles:
+    active: prod
+
 server:
   port: ${PORT:9000}
